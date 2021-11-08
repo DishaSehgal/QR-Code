@@ -10,7 +10,8 @@ qr=qrcode.QRCode(
     box_size=10,
     border=4
 )
-#create a variable to store the info,
+#create a variable to store the info such as a link or text. 
+#Both examples are given below
 data="https://github.com/DishaSehgal"
 #data="Hello! Welcome to the world of programming"
 
@@ -19,7 +20,7 @@ img=qrcode.make(data)
 print(type(img))
 
 #save the qr code
-img.save("Disha github qrcode.jpg")
+img.save(" my github qrcode.jpg")
 
 import cv2
 
@@ -27,7 +28,7 @@ import cv2
 decoder=cv2.QRCodeDetector()
 
 #load your data
-file_name="Disha github qrcode.jpg"
+file_name="my github qrcode.jpg"
 image=cv2.imread(file_name)
 
 #decode and print the required info
